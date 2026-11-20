@@ -73,7 +73,7 @@ const createUser = async (username, email, password) => {
     const userData = {
       password,
       email,
-      roles: ['viewer'],
+      roles: config.elastic.defaultRoles,
       full_name: username
     };
 

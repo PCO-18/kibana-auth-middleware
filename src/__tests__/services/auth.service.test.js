@@ -139,6 +139,21 @@ describe('Auth Service', () => {
       );
     });
 
+    it('should create user with the configured default roles', async () => {
+      const config = require('../../config/index.js').default;
+      const originalRoles = config.elastic.defaultRoles;
+      config.elastic.defaultRoles = ['sso_no_access'];
+      fetch.mockResolvedValueOnce({ ok: true, text: () => Promise.resolve('user created') });
+
+      try {
+        await authService.createUser('testuser', 'test@example.com', 'password');
+        const body = JSON.parse(fetch.mock.calls[0][1].body);
+        expect(body.roles).toEqual(['sso_no_access']);
+      } finally {
+        config.elastic.defaultRoles = originalRoles;
+      }
+    });
+
     it('should throw error on failure', async () => {
       const mockResponse = {
         ok: false,
