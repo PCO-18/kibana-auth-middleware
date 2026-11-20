@@ -13,24 +13,24 @@
     "release:dry-run": "semantic-release --dry-run"
   },
   "dependencies": {
-    "axios": "^1.9.0",
+    "axios": "^1.21.1",
     "dotenv": "^16.5.0",
-    "express": "^5.1.0",
+    "express": "^5.3.0",
     "http-proxy-middleware": "^3.0.5",
     "node-fetch": "^3.3.2",
     "node-securecookie": "^0.1.0",
-    "winston": "^3.17.0"
+    "winston": "^3.19.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.27.2",
     "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.3",
-    "@semantic-release/npm": "^11.0.2",
-    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@semantic-release/git": "^11.0.1",
+    "@semantic-release/github": "^12.0.11",
+    "@semantic-release/npm": "^13.2.0",
+    "@semantic-release/release-notes-generator": "^14.1.1",
     "jest": "^29.7.0",
     "nock": "^14.0.5",
-    "semantic-release": "^24.2.5",
+    "semantic-release": "^25.0.9",
     "supertest": "^7.1.1"
   }
 }
