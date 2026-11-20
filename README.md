@@ -1,3 +1,5 @@
+Fork from https://github.com/alexsanderp/kibana-auth-middleware
+
 # Kibana Auth Middleware
 
 A lightweight authentication middleware for Kibana that enables Single Sign-On (SSO) using [oauth2-proxy](https://oauth2-proxy.github.io/oauth2-proxy/) — a free and simple alternative to the native SSO available only in Kibana's Platinum and Enterprise tiers.
@@ -91,8 +93,8 @@ npm start
 ### 🐳 Running with Docker
 
 ```bash
-docker pull alexsanderp/kibana-auth-middleware:latest
-docker run -p 3000:3000 --env-file .env alexsanderp/kibana-auth-middleware:latest
+docker pull pco18/kibana-auth-middleware:latest
+docker run -p 3000:3000 --env-file .env pco18/kibana-auth-middleware:latest
 ```
 
 ## ✅ Testing
@@ -117,14 +119,6 @@ npm run test:coverage
 - Users are created with the roles defined in `ELASTIC_DEFAULT_ROLES` (`viewer` by default). Use a custom role without privileges to enforce least privilege (see [Default Roles](#-default-roles)).
 - Only emails from allowed domains can authenticate.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for new features, bug fixes, or improvements. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
-
-## 📬 Contact
-
-For questions or feedback, feel free to open an issue on GitHub.
